@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="team5Main.css">
+</head>
+<body>
+	<div class="transparent5" style="display:none;"></div>
+	<div id="team5-div1"><center><img src="infyLogo.png" width="160px" height="75px"  style="margin-top: 10px;"></center>
+		<div id="team5-div1_1"><span style="font-size: 17px;position: absolute; right: 7px;top: 5px">&#9747;</span></div>
+	</div>
+	<div id="team5-div2" >
+		<div id="team5-div2_1" style="padding-top: 5px;">
+
+		<p style="font-size: 19.2px; margin-top :0px ;margin-bottom: -7px;">Infosys Limited Recruitment</p>
+		<p style="font-size:16px;margin-bottom: 6px;">Electronics City, Hosur Road, Bangalore - 560100, India</p>
+		<b style="font-size:17.8px;">APPLICATION FOR EMPLOYMENT</b><br>
+		<p style= "font-size:16.2px; margin-top: 7px;">Proof Of Identity</p>
+		</div>
+
+		<div id="feedback" onclick="feedback()">
+			<img src="feedback.png">
+		</div>
+		<div id="team5-div2_2">
+			<p style="margin-top: 6px;padding-top: 10px;font-weight: bold;text-indent: 15px;font-size: 15px;">1.&nbsp;&nbsp;&nbsp;Please upload your college photo identity card or government photo identity proof in PDF for verification</p>
+			<p style="text-indent: 40px;font-size: 13.3px;margin-top: -3px;">Please do not upload Aadhar card as your photo identity proof</p>
+			<p style="text-indent: 40px;font-size: 13px;opacity: 0.5;">Up to 1 file, only pdf with max size of 5MB</p>
+			
+
+			<div class="main">
+	            <div class="drop-zone">
+	                <span class="drop-zone__prompt">Drop and Drop <br>or <br> <span class="drop">Browse</span></span>
+	                <input type="file" name="myFile" class="drop-zone__input" accept="APPLICATION/pdf,APPLICATION"> 
+	              </div>
+	              <div id="uploaded-files"><b>uploaded files:</b></div>
+	              <div class="files-area">
+	                <div class="img"><img src="pdflogo.png" style= "height: 30px; width: 22px;"></div>
+	                <div class="filename"><span id="x">&times;</span></div>
+	              </div>
+        	</div>
+
+		</div>
+		<input type="submit" id="submit-previous" name="" value="PREVIOUS PAGE">
+		<input type="submit" id="submit-next" name="" value="NEXT PAGE">
+		<div style="display: none;" id="feedback1">
+			<img src="infofeed.png" style="margin-left: -1px;margin-top: 13px; margin-bottom: 20px;">
+		<div id="feedback-div1"><p style=" margin-top: 40px;font-size: 22px; margin-left: 40px;">Bug Report</p></div>
+		<div id="feedback-div2"><p style="margin-top: 40px;font-size: 22px; margin-left: 20px;">Feature Request</p></div>
+		<br>
+		<hr width="420px">
+		<div id="feedback-div3"><p style="margin-top: 60px; font-size: 24px;margin-left: 90px;">General Feedback</p></div>
+		<img src="infofeedfooter.png" style="position: absolute; bottom:0">
+		<span id="x-1" onclick="feedback1()">X</span>
+		</div>
+	</div>
+	<footer>
+		<div id="team5-div4">
+			<b id="progress">55 of 99 answered&nbsp;</b><progress value="55" max="100"></progress>
+			<b id="esTime">Estimated Time:29 mins</b>
+			<input type="submit" id="submit" name="" value="NEXT PAGE">
+		</div>
+	</footer>
+
+<script type="text/javascript" src="team5Main.js" ></script>
+</body>
+
+</html>
