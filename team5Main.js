@@ -14,9 +14,9 @@ let filename=document.querySelector('.filename');
 let imagediv=document.querySelector('.img')
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 const dropZoneElement = inputElement.closest(".drop-zone");
-const dropZoneButton = inputElement.closest(".drop-zone");
-const image=document.querySelector('.img');
-dropZoneElement.addEventListener("click", (e) => {
+const dropZoneButton = document.querySelector(".drop");
+const msg=document.querySelector('.team5-div1_1');
+dropZoneButton.addEventListener("click", (e) => {
     inputElement.click();
 });
 
@@ -59,12 +59,33 @@ if (!thumbnailElement) {
     thumbnailElement.classList.add("drop-zone__thumb");
     filename.appendChild(thumbnailElement);
     wrong.style.display='block';
+    document.getElementById('team5-div1_1').style.display='block';
+    document.getElementById('progressbar').style.display='block';
+    document.getElementById('img5').style.display='block';
+    document.getElementById('uploaded-after').style.display='block';
+    setTimeout((e)=>{
+        document.getElementById('progressbar').value='50';
+    },1000)
+    setTimeout((e)=>{
+        document.getElementById('progressbar').value='100';
+    },1000)
+
+    setTimeout((e)=>{
+        document.getElementById('team5-div1_1').innerHTML=file.name+' file added';
+    },1000)
+    setTimeout((e)=>{
+        document.getElementById('team5-div1_1').style.display='none';
+	document.getElementById('team5-div1_1').innerHTML='';
+    },3000)
 }
 thumbnailElement.dataset.label = file.name;
 
 wrong.addEventListener('click',(e)=>{
     thumbnailElement.classList.remove("drop-zone__thumb");
+    document.getElementById('img5').style.display='none';
+    document.getElementById('progressbar').style.display='none';
     wrong.style.display='none';
+    document.getElementById('uploaded-after').style.display='none';
 })
 // Show thumbnail for image files
 if (file.type.startsWith("image/")) {

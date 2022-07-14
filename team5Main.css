@@ -6,14 +6,16 @@
 	position: absolute;
 	float: right;
 	right: 0;
-	margin-top: -83px;
+	margin-top: -75px;
 	width: 330px;
-	height: 38px;
+	height: 35px;
 	border: 1px solid rgba(0,0, 0,0.7);
 	border-radius: 4px;
 	border-right: none;
+	padding-left: 20px;
+	padding-top: 10px;
 	background-color: rgba(51, 170, 51, .3);
-	box-shadow: 0px 7px 15px 0px rgba(0,0, 0,0.3);
+	box-shadow: 0px 3px 5px 0px rgba(0,0, 0,0.3);
 }
 #team5-div2{
 	font-family:sans-serif;
@@ -124,7 +126,6 @@ progress{
 	right: 0px;
 	top: 290px;
 	cursor: pointer;
-
 	border-radius: 5px;
 }
 /*#feedback img{
@@ -134,8 +135,8 @@ progress{
 #feedback1{
 	position: fixed;
 	top: 30px;
-	left: 420px;
-	width: 498px;
+	left: 422px;
+	width: 502px;
 	height: 566px;
 	background-color: white;
 	/*border-radius: 1px solid;*/
@@ -221,31 +222,33 @@ display: flex;
     color: black;
     background: white;    
     font-size: 14px;
-    text-align: center;
-}
-.files-area{
-    height: 50px;
-    width: 40%;
-    padding-top: 10px;
-    margin-left: 30px;
-    display: flex;
-}
-.files-area .img{
-    height: 35px;
-    width: 7%;
-    /*border: 1px solid black;*/
-}
-.files-area .filename{
-    height: 35px;
-    width: 500px;
-    /*border: 1px solid black;*/
+    text-align: left;
 }
 .files-area{
 	position: absolute;
 	top: 10px;
 	left: 645px;
+    /*height: 50px;*/
+    height: max-content;
+    width: 40%;
+    padding-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    /*border: 1px solid #000;*/
 }
-
+.files-area .img{
+    height: 35px;
+    width: 7%;
+	padding-bottom: 5px;
+	/*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
+    /*border: 1px solid black;*/
+}
+.files-area .filename{
+	position: relative;
+    height: 70px;
+    width: 500px;
+    /*border: 1px solid black;*/
+}
 #uploaded-files{
 	 /*border: 1px solid;*/
 	 width :150px;
@@ -269,12 +272,14 @@ display: flex;
     /*background-color: skyblue;*/
 }
 #x{
-	font-size: 30px;
+	font-size: 36px;
 	position: absolute;
 	z-index: 1;
 	display: none;
-	right: 20px;
+	right: 5px;
+	top: -3px;
 	cursor: pointer;
+	opacity: 0.4;
 }
 #x-1{
 	font-size: 20px;
@@ -294,4 +299,10 @@ display: flex;
 	right: 0;
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+#progressbar{
+	position: absolute;
+	margin-top: 30px;
+	margin-left: -260px;
+	z-index: 1;
 }
