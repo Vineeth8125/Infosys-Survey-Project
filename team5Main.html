@@ -28,14 +28,15 @@
 
 			<div class="main">
 	            <div class="drop-zone">
-	                <span class="drop-zone__prompt">Drop and Drop <br>or <br> <span class="drop">Browse</span></span>
-	                <input type="file" name="myFile" class="drop-zone__input" accept="APPLICATION/pdf,APPLICATION"> 
+	                <span class="drop-zone__prompt" id="d1">Drop and Drop <br>or <br> <span class="drop" id="d2">Browse</span></span>
+	                <input type="file" name="myFile" class="drop-zone__input" id="drop-display" accept="APPLICATION/pdf,APPLICATION"> 
 	             </div>
 	              <div id="uploaded-files"><b>uploaded files:</b></div>
 	              <div class="files-area">
 	                <div class="img" id="img5" style="display: none;"><img src="pdflogo.png" style= "height: 30px; width: 22px;">
 	                </div>
 	                <div class="filename">
+	                	<label id="file-size" style="top: 8px;font-size: 14px;position: absolute;z-index: 3;right: 30px;opacity: 0.5;"></label>
 						<span id="x">&times;</span>
 						<progress value="10" max="100" id="progressbar" style="display: none;"></progress>
 						<p id="uploaded-after" style="position: absolute; top: 28px;display: none;z-index: 3;font-size: 14px">uploaded!</p>
