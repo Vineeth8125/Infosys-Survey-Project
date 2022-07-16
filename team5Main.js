@@ -7,7 +7,6 @@ function feedback1(){
 	document.getElementById("feedback").style.display="block"
 	document.getElementById("feedback1").style.display="none"
 	document.querySelector(".transparent5").style.display="none"
-
 }
 var wrong=document.getElementById('x');
 let filename=document.querySelector('.filename');
@@ -60,6 +59,7 @@ if (!thumbnailElement) {
     filename.appendChild(thumbnailElement);
     wrong.style.display='block';
     document.getElementById("drop-display").disabled= true;
+    document.getElementById("submit").disabled = false;
 	document.getElementById("d1").style.color="rgba(0, 0, 0, 0.5)";
 	document.getElementById("d2").style.color="rgba(0, 0, 0, 0.5)";
     document.getElementById('team5-div1_1').style.display='block';
@@ -103,6 +103,9 @@ thumbnailElement.dataset.label = file.name;
 wrong.addEventListener('click',(e)=>{
     thumbnailElement.classList.remove("drop-zone__thumb");
     document.getElementById("drop-display").disabled = false;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("d1").style.color="rgba(0, 0, 0, 1)";
+	document.getElementById("d2").style.color="rgba(0, 0, 0, 1)";
     document.getElementById('img5').style.display='none';
     document.getElementById('progressbar').style.display='none';
     wrong.style.display='none';
@@ -120,4 +123,23 @@ if (file.type.startsWith("image/")) {
 } else {
     imagediv.style.backgroundImage = null;
 }
+}
+function validate(){
+	document.getElementById("error1").style.display="none"
+	document.getElementById("error").style.display="none"
+	if(document.getElementById("drop-display").files.length=="0"){
+		document.getElementById("error").style.display="block"
+		return false
+	}
+	else{
+		let size=document.getElementById("drop-display").files[0].size
+		size=size/1024
+		size=size/1024
+		if(size>5){
+			document.getElementById("error1").style.display="block"
+			return false
+	}
+	}
+	
+
 }
